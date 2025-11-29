@@ -5,7 +5,6 @@
   <title>Yuchen Luo - Personal Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    /* 简单、干净的样式 */
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
@@ -15,82 +14,118 @@
       background-color: #f5f5f5;
     }
 
-    .container {
-      max-width: 900px;
+    .page-wrapper {
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 24px 16px 40px;
-      background-color: #ffffff;
-      min-height: 100vh;
+      padding: 32px 16px 40px;
     }
 
-    header {
+    /* 顶部名字 */
+    .top-header {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .top-header span.en-name {
+      margin-left: 8px;
+      color: #555;
+      font-weight: 400;
+      font-size: 18px;
+    }
+
+    .main-card {
+      background-color: #ffffff;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+      padding: 24px 28px 28px;
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 24px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 16px;
+      gap: 32px;
     }
 
-    .intro {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      max-width: 600px;
+    /* 左侧栏 */
+    .sidebar {
+      width: 260px;
+      max-width: 100%;
+      text-align: left;
+      border-right: 1px solid #eee;
+      padding-right: 24px;
     }
 
     .avatar {
-      width: 96px;
-      height: 96px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      flex-shrink: 0;
+      display: block;
+      margin: 0 auto 12px;
     }
 
-    .name {
-      font-size: 28px;
-      font-weight: 700;
-      margin: 0 0 4px;
+    .side-name {
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 4px;
     }
 
-    .subtitle {
-      margin: 0 0 8px;
-      font-size: 16px;
-      color: #555;
+    .side-title {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      margin-bottom: 16px;
     }
 
-    nav a {
-      margin-left: 12px;
-      text-decoration: none;
-      color: #0366d6;
+    .side-links {
+      margin-top: 16px;
       font-size: 14px;
     }
 
-    nav a:hover {
+    .side-links a {
+      display: inline-block;
+      margin-left: 4px;
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    .side-links a:hover {
       text-decoration: underline;
     }
 
-    section {
-      margin-bottom: 28px;
+    .side-link-item {
+      margin-bottom: 6px;
     }
 
-    section h2 {
+    /* 右侧内容 */
+    .content {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section h2 {
       font-size: 20px;
-      margin: 0 0 12px;
+      margin: 0 0 10px;
       border-bottom: 1px solid #eee;
       padding-bottom: 4px;
     }
 
-    .pub-list,
+    .section ul {
+      padding-left: 18px;
+      margin: 4px 0 0;
+    }
+
     .proj-list {
       list-style: none;
       padding-left: 0;
+      margin: 0;
     }
 
-    .pub-list li,
     .proj-list li {
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
 
     .item-title {
@@ -116,134 +151,137 @@
     }
 
     footer {
-      margin-top: 24px;
+      max-width: 1100px;
+      margin: 12px auto 0;
+      padding: 0 16px 24px;
       font-size: 13px;
       color: #777;
-      border-top: 1px solid #eee;
-      padding-top: 8px;
     }
 
-    @media (max-width: 600px) {
-      header {
+    @media (max-width: 760px) {
+      .main-card {
         flex-direction: column;
-        align-items: flex-start;
       }
-      nav {
-        margin-top: 8px;
-      }
-      nav a {
-        margin-left: 0;
-        margin-right: 12px;
+      .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-right: 0;
+        padding-bottom: 16px;
+        margin-bottom: 8px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="intro">
+  <div class="page-wrapper">
+    <!-- 顶部名字 -->
+    <div class="top-header">
+      Yuchen Luo
+      <span class="en-name">(Yuchen)</span>
+    </div>
+
+    <div class="main-card">
+      <!-- 左侧栏：头像 + About 简要信息 + Contact + CV -->
+      <aside class="sidebar">
         <img class="avatar" src="profile.jpg" alt="Yuchen Luo" />
-        <div>
-          <h1 class="name">Yuchen Luo</h1>
-          <p class="subtitle">
-            M.S. student in Electrical Engineering<br />
-            Pennsylvania State University
+        <div class="side-name">Yuchen Luo</div>
+        <div class="side-title">
+          M.S. student in Electrical Engineering<br />
+          Pennsylvania State University
+        </div>
+
+        <div class="side-links">
+          <div class="side-link-item">
+            📧 Email:
+            <a href="mailto:yuchen.luo@psu.edu">yuchen.luo@psu.edu</a>
+          </div>
+          <div class="side-link-item">
+            📝 CV:
+            <a href="Yuchen_Luo_CV.pdf" target="_blank">[PDF]</a>
+          </div>
+          <!-- 需要的话可以再加：
+          <div class="side-link-item">
+            🔗 LinkedIn:
+            <a href="https://www.linkedin.com/in/..." target="_blank">LinkedIn</a>
+          </div>
+          <div class="side-link-item">
+            📚 Google Scholar:
+            <a href="https://scholar.google.com/..." target="_blank">Scholar</a>
+          </div>
+          -->
+        </div>
+      </aside>
+
+      <!-- 右侧主要内容：About / Research Interests / Research Projects -->
+      <main class="content">
+        <section class="section" id="about">
+          <h2>About</h2>
+          <p>
+            I am currently a master's student in Electrical Engineering at Pennsylvania State
+            University. Before that, I received my B.Eng. in Automation from Ocean University
+            of China. My background is in signal processing, machine learning, and computer
+            vision.
           </p>
           <p>
-            My research interests lie in the intersection of biomedical image analysis,
-            machine learning, and computer vision, especially in designing interpretable
-            tools and architectures that have potential in real-world applications.
+            Broadly, my research interests lie in the intersection of biomedical image analysis,
+            machine learning, and computer vision, with a focus on designing interpretable tools
+            and architectures that have potential in real-world clinical applications.
           </p>
-        </div>
-      </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+        </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I am currently a master's student in Electrical Engineering at Pennsylvania State
-        University. Before that, I received my B.Eng. in Automation from Ocean University
-        of China. My background is in signal processing, machine learning, and computer
-        vision.
-      </p>
-    </section>
+        <section class="section" id="research-interests">
+          <h2>Research Interests</h2>
+          <ul>
+            <li>Biomedical image analysis and computational pathology</li>
+            <li>Interpretable and trustworthy machine learning</li>
+            <li>Computer vision and image processing</li>
+          </ul>
+        </section>
 
-    <section id="research">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Biomedical image analysis</li>
-        <li>Interpretable machine learning</li>
-        <li>Computer vision and image processing</li>
-      </ul>
-    </section>
+        <section class="section" id="projects">
+          <h2>Research Projects</h2>
+          <ul class="proj-list">
+            <li>
+              <span class="item-title">
+                Etiology-Guided, Informed AI for Histological Evaluation of IBD
+              </span>
+              <span class="tag">Ongoing</span><br />
+              Developing an etiology-guided, interpretable multiple instance learning framework
+              for histopathology image analysis in inflammatory bowel disease, combining domain
+              priors, attention heatmaps, tissue segmentation, and ordinal regression for
+              clinically meaningful severity scoring.
+            </li>
 
-    <section id="projects">
-      <h2>Selected Projects</h2>
-      <ul class="proj-list">
-        <li>
-          <span class="item-title">
-            Etiology-Guided, Informed AI for Histological Evaluation of IBD
-          </span>
-          <span class="tag">Ongoing</span><br />
-          Developing an etiology-guided, interpretable multiple instance learning framework
-          for histopathology image analysis in inflammatory bowel disease, combining domain
-          priors, attention heatmaps, tissue segmentation, and ordinal regression for
-          clinically meaningful severity scoring.
-        </li>
+            <li>
+              <span class="item-title">
+                Intelligent Measurement Method for Blade Noise of Fast Wind Turbines
+              </span><br />
+              Designed an intelligent monitoring pipeline that converts acoustic signals to
+              spectrograms and applies deep learning and computer vision techniques to predict
+              wind turbine blade conditions, using simulated fault noise to enrich the dataset.
+            </li>
 
-        <li>
-          <span class="item-title">
-            Intelligent Measurement Method for Blade Noise of Fast Wind Turbines
-          </span><br />
-          Designed an intelligent monitoring pipeline that converts acoustic signals to
-          spectrograms and applies deep learning and computer vision techniques to predict
-          wind turbine blade conditions, using simulated fault noise to enrich the dataset.
-        </li>
+            <li>
+              <span class="item-title">ArUco Marker-based Indoor Localization System</span><br />
+              Built a 3D indoor localization system using ArUco markers to construct a global
+              coordinate frame and estimate real-time camera pose, including cross-validation
+              from multiple markers and joint estimation of distances and poses.
+            </li>
 
-        <li>
-          <span class="item-title">ArUco Marker-based Indoor Localization System</span><br />
-          Built a 3D indoor localization system using ArUco markers to construct a global
-          coordinate frame and estimate real-time camera pose, including cross-validation
-          from multiple markers and joint estimation of distances and poses.
-        </li>
-
-        <li>
-          <span class="item-title">AI-based Movie Recommendation and Q&amp;A System</span><br />
-          Contributed to an AI-powered movie recommendation and question-answering system by
-          curating a Chinese movie dataset and integrating a ChatGLM2-6B language model with
-          backend recommendation logic.
-        </li>
-      </ul>
-    </section>
-
-    <section id="cv">
-      <h2>CV</h2>
-      <p>
-        You can download my CV here:
-        <a href="cv_yuchen_luo.pdf" target="_blank">[PDF]</a>
-      </p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Email: yuchenluo.ethan@gmail.com<br />
-        </a>
-        <br />
-        <!-- 这里可以再加 LinkedIn / Google Scholar -->
-      </p>
-    </section>
-
-    <footer>
-      &copy; 2025 Yuchen Luo. Last updated: Nov 2025.
-    </footer>
+            <li>
+              <span class="item-title">AI-based Movie Recommendation and Q&amp;A System</span><br />
+              Contributed to an AI-powered movie recommendation and question-answering system by
+              curating a Chinese movie dataset and integrating a ChatGLM2-6B language model with
+              backend recommendation logic.
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
   </div>
+
+  <footer>
+    &copy; 2025 Yuchen Luo. Last updated: Nov 2025.
+  </footer>
 </body>
 </html>
