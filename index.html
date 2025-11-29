@@ -34,8 +34,20 @@
     }
 
     .intro {
-      max-width: 600px;
+     display: flex;
+     align-items: center;
+     gap: 16px;
+     max-width: 600px;
     }
+
+   .avatar {
+     width: 96px;
+     height: 96px;
+     border-radius: 50%;
+     object-fit: cover;
+     flex-shrink: 0;
+    }
+
 
     .name {
       font-size: 28px;
@@ -128,24 +140,30 @@
 <body>
   <div class="container">
     <header>
-      <div class="intro">
-        <h1 class="name">Yuchen Luo</h1>
-        <p class="subtitle">
-          M.S. student in Electrical Engineering<br />
-          Pennsylvania State University
-        </p>
-        <p>
-          My research interests lie in the intersection of biomedical image analysis, machine learning, and computer vision, especially in designing interpretable tools and architectures that have potential in real-world applications.
-        </p>
-      </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <div class="intro">
+    <img class="avatar" src="profile.jpg" alt="Yuchen Luo" />
+    <div>
+      <h1 class="name">Yuchen Luo</h1>
+      <p class="subtitle">
+        M.S. student in Electrical Engineering<br />
+        Pennsylvania State University
+      </p>
+      <p>
+        My research interests lie in the intersection of biomedical image analysis, machine
+        learning, and computer vision, especially in designing interpretable tools and
+        architectures that have potential in real-world applications.
+      </p>
+    </div>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
 
     <section id="about">
       <h2>About</h2>
@@ -168,21 +186,37 @@
     <section id="projects">
       <h2>Selected Projects</h2>
       <ul class="proj-list">
-        <li>
-          <span class="item-title">Etiology-Guided, Informed AI for Histological Evaluation of IBD</span>
-          <span class="tag">Ongoing</span><br />
-          Developing an interpretable multiple instance learning framework for whole slide image
-          analysis in inflammatory bowel disease, integrating domain priors and ordinal regression.
-          <!-- 可以在这里加链接，例如：
-          [<a href="link_to_paper.pdf">PDF</a>] [<a href="https://github.com/...">Code</a>]
-          -->
-        </li>
-        <li>
-          <span class="item-title">Indoor Positioning with RF and Computer Vision</span><br />
-          Explored indoor localization using RF signals and camera-based tracking, combining
-          signal processing and computer vision techniques.
-        </li>
-      </ul>
+  <li>
+    <span class="item-title">Etiology-Guided, Informed AI for Histological Evaluation of IBD</span>
+    <span class="tag">Ongoing</span><br />
+    Developing an etiology-guided, interpretable multiple instance learning framework for
+    histopathology image analysis in inflammatory bowel disease, combining domain priors,
+    attention heatmaps, tissue segmentation, and ordinal regression for clinically meaningful
+    severity scoring.
+  </li>
+
+  <li>
+    <span class="item-title">Intelligent Measurement Method for Blade Noise of Fast Wind Turbines</span><br />
+    Designed an intelligent monitoring pipeline that converts acoustic signals to spectrograms
+    and applies deep learning and computer vision techniques to predict wind turbine blade
+    conditions, using simulated fault noise to enrich the dataset.
+  </li>
+
+  <li>
+    <span class="item-title">ArUco Marker-based Indoor Localization System</span><br />
+    Built a 3D indoor localization system using ArUco markers to construct a global coordinate
+    frame and estimate real-time camera pose, including cross-validation from multiple markers
+    and joint estimation of distances and poses.
+  </li>
+
+  <li>
+    <span class="item-title">AI-based Movie Recommendation and Q&amp;A System</span><br />
+    Contributed to an AI-powered movie recommendation and question-answering system by curating
+    a Chinese movie dataset and integrating a ChatGLM2-6B language model with backend
+    recommendation logic.
+  </li>
+</ul>
+
     </section>
 
     <section id="cv">
@@ -208,3 +242,4 @@
   </div>
 </body>
 </html>
+
