@@ -9,9 +9,10 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      line-height: 1.7;           /* 行距稍微放大一点 */
       color: #222;
       background-color: #f5f5f5;
+      font-size: 16px;            /* 全局基础字号 */
     }
 
     .page-wrapper {
@@ -22,7 +23,7 @@
 
     /* 顶部名字 */
     .top-header {
-      font-size: 26px;
+      font-size: 28px;            /* 原来 26，稍微大一点 */
       font-weight: 600;
       margin-bottom: 24px;
     }
@@ -54,8 +55,8 @@
     }
 
     .avatar {
-      width: 140px;
-      height: 140px;
+      width: 180px;               /* 头像放大 */
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
       display: block;
@@ -70,7 +71,7 @@
     }
 
     .side-title {
-      font-size: 14px;
+      font-size: 15px;            /* 原来 14 */
       color: #666;
       text-align: center;
       margin-bottom: 16px;
@@ -93,7 +94,7 @@
     }
 
     .side-link-item {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     /* 右侧内容 */
@@ -103,11 +104,11 @@
     }
 
     .section {
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
     .section h2 {
-      font-size: 20px;
+      font-size: 22px;            /* 标题更显眼一点 */
       margin: 0 0 10px;
       border-bottom: 1px solid #eee;
       padding-bottom: 4px;
@@ -125,11 +126,12 @@
     }
 
     .proj-list li {
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .item-title {
       font-weight: 600;
+      font-size: 15px;            /* 项目标题加一点字号 */
     }
 
     .tag {
@@ -181,7 +183,7 @@
     </div>
 
     <div class="main-card">
-      <!-- 左侧栏：头像 + About 简要信息 + Contact + CV -->
+      <!-- 左侧栏：头像 + Contact + CV -->
       <aside class="sidebar">
         <img class="avatar" src="profile.jpg" alt="Yuchen Luo" />
         <div class="side-name">Yuchen Luo</div>
@@ -199,15 +201,6 @@
             📝 CV:
             <a href="Yuchen_Luo_CV.pdf" target="_blank">[PDF]</a>
           </div>
-          <!-- 需要的话可以再加：
-          <div class="side-link-item">
-            🔗 LinkedIn:
-            <a href="https://www.linkedin.com/in/..." target="_blank">LinkedIn</a>
-          </div>
-          <div class="side-link-item">
-            📚 Google Scholar:
-            <a href="https://scholar.google.com/..." target="_blank">Scholar</a>
-          </div>
           -->
         </div>
       </aside>
@@ -218,14 +211,14 @@
           <h2>About</h2>
           <p>
             I am currently a master's student in Electrical Engineering at Pennsylvania State
-            University. Before that, I received my B.Eng. in Automation from Ocean University
+            University. Before this, I received my B.Eng. in Automation from Ocean University
             of China. My background is in signal processing, machine learning, and computer
             vision.
           </p>
           <p>
-            Broadly, my research interests lie in the intersection of biomedical image analysis,
-            machine learning, and computer vision, with a focus on designing interpretable tools
-            and architectures that have potential in real-world clinical applications.
+            My research interests lie in the intersection of biomedical image analysis, machine
+            learning, and computer vision, especially in designing interpretable tools and 
+            architectures that have potential in real-world applications.
           </p>
         </section>
 
@@ -243,31 +236,26 @@
           <ul class="proj-list">
             <li>
               <span class="item-title">
-                Etiology-Guided, Informed AI for Histological Evaluation of IBD
+                Etiology-Guided, Informed AI for Histological Evaluation of Inflammatory Bowel Disease
               </span>
               <span class="tag">Ongoing</span><br />
-              Developing an etiology-guided, interpretable multiple instance learning framework
-              for histopathology image analysis in inflammatory bowel disease, combining domain
-              priors, attention heatmaps, tissue segmentation, and ordinal regression for
-              clinically meaningful severity scoring.
+              Developed an etiology-guided, interpretable AI framework for histopathological evaluation of Inflammatory 
+              Bowel Disease, combining domain priors with deep learning to enable accurate and efficient automated analysis
             </li>
 
             <li>
               <span class="item-title">
                 Intelligent Measurement Method for Blade Noise of Fast Wind Turbines
               </span><br />
-              Designed an intelligent monitoring pipeline that converts acoustic signals to
-              spectrograms and applies deep learning and computer vision techniques to predict
-              wind turbine blade conditions, using simulated fault noise to enrich the dataset.
+              Developed an intelligent methodology for monitoring wind turbine blade status by integrating
+              time-frequency analysis with deep learning and computer vision
             </li>
 
             <li>
               <span class="item-title">ArUco Marker-based Indoor Localization System</span><br />
-              Built a 3D indoor localization system using ArUco markers to construct a global
-              coordinate frame and estimate real-time camera pose, including cross-validation
-              from multiple markers and joint estimation of distances and poses.
+              Developed an indoor localization framework by deploying ArUco markers to establish a global 3D coordinate 
+              system and enabling real-time pose estimation through marker detection and coordinate transformations.
             </li>
-
           </ul>
         </section>
       </main>
@@ -279,4 +267,3 @@
   </footer>
 </body>
 </html>
-
