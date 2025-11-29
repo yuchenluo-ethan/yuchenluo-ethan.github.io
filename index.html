@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Yuchen Luo - Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* 简单、干净的样式 */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #222;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+      background-color: #ffffff;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 16px;
+    }
+
+    .intro {
+      max-width: 600px;
+    }
+
+    .name {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 4px;
+    }
+
+    .subtitle {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    nav a {
+      margin-left: 12px;
+      text-decoration: none;
+      color: #0366d6;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 28px;
+    }
+
+    section h2 {
+      font-size: 20px;
+      margin: 0 0 12px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 4px;
+    }
+
+    .pub-list, .proj-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .pub-list li, .proj-list li {
+      margin-bottom: 10px;
+    }
+
+    .item-title {
+      font-weight: 600;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 1px 6px;
+      font-size: 11px;
+      border-radius: 999px;
+      background-color: #e3f2fd;
+      color: #1565c0;
+      margin-left: 6px;
+    }
+
+    a {
+      color: #0366d6;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 13px;
+      color: #777;
+      border-top: 1px solid #eee;
+      padding-top: 8px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 8px;
+      }
+      nav a {
+        margin-left: 0;
+        margin-right: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="intro">
+        <h1 class="name">Yuchen Luo</h1>
+        <p class="subtitle">
+          M.S. student in Electrical Engineering<br />
+          Pennsylvania State University
+        </p>
+        <p>
+          My research interests lie in the intersection of biomedical image analysis, machine learning, and computer vision, especially in designing interpretable tools and architectures that have potential in real-world applications.
+        </p>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am currently a master student studying Electrical Engineering at Pennsylvania State University.
+        Before that, I received my B.Eng. in Automation from Ocean University of China.
+        My background is in signal processing, machine learning, and computer vision.
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Biomedical image analysis</li>
+        <li>Interpretable machine learning</li>
+        <li>Computer vision and image processing</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <ul class="proj-list">
+        <li>
+          <span class="item-title">Etiology-Guided, Informed AI for Histological Evaluation of IBD</span>
+          <span class="tag">Ongoing</span><br />
+          Developing an interpretable multiple instance learning framework for whole slide image
+          analysis in inflammatory bowel disease, integrating domain priors and ordinal regression.
+          <!-- 可以在这里加链接，例如：
+          [<a href="link_to_paper.pdf">PDF</a>] [<a href="https://github.com/...">Code</a>]
+          -->
+        </li>
+        <li>
+          <span class="item-title">Indoor Positioning with RF and Computer Vision</span><br />
+          Explored indoor localization using RF signals and camera-based tracking, combining
+          signal processing and computer vision techniques.
+        </li>
+      </ul>
+    </section>
+
+    <section id="cv">
+      <h2>CV</h2>
+      <p>
+        You can download my CV here:
+        <a href="cv_yuchen_luo.pdf" target="_blank">[PDF]</a>
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: yuchen.luo [at] psu [dot] edu<br />
+        GitHub: <a href="https://github.com/your-github-username" target="_blank">github.com/your-github-username</a><br />
+        <!-- 这里可以再加 LinkedIn / Google Scholar -->
+      </p>
+    </section>
+
+    <footer>
+      &copy; 2025 Yuchen Luo. Last updated: Nov 2025.
+    </footer>
+  </div>
+</body>
+</html>
