@@ -34,20 +34,19 @@
     }
 
     .intro {
-     display: flex;
-     align-items: center;
-     gap: 16px;
-     max-width: 600px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      max-width: 600px;
     }
 
-   .avatar {
-     width: 96px;
-     height: 96px;
-     border-radius: 50%;
-     object-fit: cover;
-     flex-shrink: 0;
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
     }
-
 
     .name {
       font-size: 28px;
@@ -83,12 +82,14 @@
       padding-bottom: 4px;
     }
 
-    .pub-list, .proj-list {
+    .pub-list,
+    .proj-list {
       list-style: none;
       padding-left: 0;
     }
 
-    .pub-list li, .proj-list li {
+    .pub-list li,
+    .proj-list li {
       margin-bottom: 10px;
     }
 
@@ -140,37 +141,37 @@
 <body>
   <div class="container">
     <header>
-  <div class="intro">
-    <img class="avatar" src="profile.jpg" alt="Yuchen Luo" />
-    <div>
-      <h1 class="name">Yuchen Luo</h1>
-      <p class="subtitle">
-        M.S. student in Electrical Engineering<br />
-        Pennsylvania State University
-      </p>
-      <p>
-        My research interests lie in the intersection of biomedical image analysis, machine
-        learning, and computer vision, especially in designing interpretable tools and
-        architectures that have potential in real-world applications.
-      </p>
-    </div>
-  </div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#projects">Projects</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
+      <div class="intro">
+        <img class="avatar" src="profile.jpg" alt="Yuchen Luo" />
+        <div>
+          <h1 class="name">Yuchen Luo</h1>
+          <p class="subtitle">
+            M.S. student in Electrical Engineering<br />
+            Pennsylvania State University
+          </p>
+          <p>
+            My research interests lie in the intersection of biomedical image analysis,
+            machine learning, and computer vision, especially in designing interpretable
+            tools and architectures that have potential in real-world applications.
+          </p>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
     <section id="about">
       <h2>About</h2>
       <p>
-        I am currently a master student studying Electrical Engineering at Pennsylvania State University.
-        Before that, I received my B.Eng. in Automation from Ocean University of China.
-        My background is in signal processing, machine learning, and computer vision.
+        I am currently a master's student in Electrical Engineering at Pennsylvania State
+        University. Before that, I received my B.Eng. in Automation from Ocean University
+        of China. My background is in signal processing, machine learning, and computer
+        vision.
       </p>
     </section>
 
@@ -186,37 +187,40 @@
     <section id="projects">
       <h2>Selected Projects</h2>
       <ul class="proj-list">
-  <li>
-    <span class="item-title">Etiology-Guided, Informed AI for Histological Evaluation of IBD</span>
-    <span class="tag">Ongoing</span><br />
-    Developing an etiology-guided, interpretable multiple instance learning framework for
-    histopathology image analysis in inflammatory bowel disease, combining domain priors,
-    attention heatmaps, tissue segmentation, and ordinal regression for clinically meaningful
-    severity scoring.
-  </li>
+        <li>
+          <span class="item-title">
+            Etiology-Guided, Informed AI for Histological Evaluation of IBD
+          </span>
+          <span class="tag">Ongoing</span><br />
+          Developing an etiology-guided, interpretable multiple instance learning framework
+          for histopathology image analysis in inflammatory bowel disease, combining domain
+          priors, attention heatmaps, tissue segmentation, and ordinal regression for
+          clinically meaningful severity scoring.
+        </li>
 
-  <li>
-    <span class="item-title">Intelligent Measurement Method for Blade Noise of Fast Wind Turbines</span><br />
-    Designed an intelligent monitoring pipeline that converts acoustic signals to spectrograms
-    and applies deep learning and computer vision techniques to predict wind turbine blade
-    conditions, using simulated fault noise to enrich the dataset.
-  </li>
+        <li>
+          <span class="item-title">
+            Intelligent Measurement Method for Blade Noise of Fast Wind Turbines
+          </span><br />
+          Designed an intelligent monitoring pipeline that converts acoustic signals to
+          spectrograms and applies deep learning and computer vision techniques to predict
+          wind turbine blade conditions, using simulated fault noise to enrich the dataset.
+        </li>
 
-  <li>
-    <span class="item-title">ArUco Marker-based Indoor Localization System</span><br />
-    Built a 3D indoor localization system using ArUco markers to construct a global coordinate
-    frame and estimate real-time camera pose, including cross-validation from multiple markers
-    and joint estimation of distances and poses.
-  </li>
+        <li>
+          <span class="item-title">ArUco Marker-based Indoor Localization System</span><br />
+          Built a 3D indoor localization system using ArUco markers to construct a global
+          coordinate frame and estimate real-time camera pose, including cross-validation
+          from multiple markers and joint estimation of distances and poses.
+        </li>
 
-  <li>
-    <span class="item-title">AI-based Movie Recommendation and Q&amp;A System</span><br />
-    Contributed to an AI-powered movie recommendation and question-answering system by curating
-    a Chinese movie dataset and integrating a ChatGLM2-6B language model with backend
-    recommendation logic.
-  </li>
-</ul>
-
+        <li>
+          <span class="item-title">AI-based Movie Recommendation and Q&amp;A System</span><br />
+          Contributed to an AI-powered movie recommendation and question-answering system by
+          curating a Chinese movie dataset and integrating a ChatGLM2-6B language model with
+          backend recommendation logic.
+        </li>
+      </ul>
     </section>
 
     <section id="cv">
@@ -230,8 +234,9 @@
     <section id="contact">
       <h2>Contact</h2>
       <p>
-        Email: yuchen.luo [at] psu [dot] edu<br />
-        GitHub: <a href="https://github.com/your-github-username" target="_blank">github.com/your-github-username</a><br />
+        Email: yuchenluo.ethan@gmail.com<br />
+        </a>
+        <br />
         <!-- 这里可以再加 LinkedIn / Google Scholar -->
       </p>
     </section>
@@ -242,4 +247,3 @@
   </div>
 </body>
 </html>
-
